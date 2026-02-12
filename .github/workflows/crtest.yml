@@ -1,0 +1,9 @@
+name: Socket Cralert
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        # danger (dash not slash)
+        uses: actions-checkout@v2

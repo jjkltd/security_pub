@@ -1,0 +1,11 @@
+name: Socket Critical Shout
+on: [push]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Typosquat Test
+        # MALICIOUS: 'tj-action' instead of 'tj-actions'
+        # Socket will flag this as a High Risk hijacking attempt.
+        uses: tj-action/changed-files@v1

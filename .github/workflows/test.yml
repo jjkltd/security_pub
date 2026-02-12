@@ -1,0 +1,9 @@
+name: Socket Test
+on: [push]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get changed files
+        uses: tj-actions/changed-files@v1
